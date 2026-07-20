@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | GateKeep</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="app-title">GateKeep</h2>
+
+        <h1>Welcome!</h1>
+
+        <p class="subtitle">
+            You're successfully logged in. We're glad to have you here!
+        </p>
+
+  
+        
+        <div class="dashboard-card">
+
+            <h3>📧 You're Logged in as</h3>
+
+            <p>{{ session["user"] }}</p>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <h3>🟢 Session Status</h3>
+
+            <p>Active</p>
+
+        </div>
+
+        <a href="/logout" class="primary-btn">
+            Log Out
+        </a>
+
+    </div>
+
+</body>
+
+</html>

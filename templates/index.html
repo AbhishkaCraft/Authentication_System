@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GateKeep</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="app-title">GateKeep</h2>
+
+        <h1>Welcome!</h1>
+
+        <p class="subtitle">
+         Create an account or log in to continue.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                ✨ Quick & Easy Registration
+            </div>
+
+            <div class="feature">
+                🔐 Password Protection with Bcrypt
+            </div>
+
+            <div class="feature">
+                💙 Clean, Simple & User-Friendly
+            </div>
+
+        </div>
+
+        <div class="home-buttons">
+
+            <a href="/signup" class="primary-btn">
+                Create Account
+            </a>
+
+            <a href="/login" class="secondary-btn">
+                Login
+            </a>
+
+        </div>
+
+        <p class="footer-text">
+            Built  using Flask, MySQL, HTML, CSS & JavaScript.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

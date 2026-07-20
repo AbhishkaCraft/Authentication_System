@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>SignUp</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="app-title">GateKeep</h2>
+
+        <h1>Let's create your account </h1>
+
+        <p class="subtitle">
+            Register to access your dashboard.
+        </p>
+
+        <form action="/signup" method="POST">
+            <div class="form-group">
+                <label>Full Name :</label>
+                <input class="input-box" type="text" name="fullname" placeholder="Enter your Full Name" required>
+
+            </div>
+            <div class="form-group">
+                <label>Email :</label>
+                <div class="password-container">
+                    <input class="input-box" type="email" name="email" placeholder="Enter your email" required>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Password :</label>
+
+                <div class="password-container">
+
+                    <input class="input-box" type="password" name="password" id="password"
+                        placeholder="Create a strong password" required>
+
+                    <button type="button" id="togglePassword">
+                        Show
+                    </button>
+                    
+                </div>
+                <p id="strengthMessage"></p>
+            </div>
+
+
+            <div class="form-group">
+                <label class="form-label">Confirm Password :</label>
+                <div class="password-container">
+                    <input class="input-box" type="password" id="confirmPassword" name="confirm_password"
+                        placeholder="Re-enter your new password" required>
+
+                    <button type="button" id="toggleConfirmPassword">
+                        Show</button>
+
+                    
+                </div>
+                <p id="matchMessage"></p>
+            </div>
+
+
+
+            <button type="submit" id="register">
+                Register
+            </button>
+
+        </form>
+
+        <p class="login-text">
+            Already have an account?
+            <a href="/login">Sign in</a>
+        </p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
